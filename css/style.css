@@ -1,0 +1,233 @@
+
+
+/* tarihçe kenar boşlukları için */
+.tarihce
+{
+
+	margin-left:50px;
+	margin-right:50px;
+	margin-top:10px;
+	margin-bottom:20px;
+
+}
+/* border adlı divin  kenar boşlukları için */
+.border
+{
+	border-style: solid;
+	border-width:1px;
+}
+
+/* CSS Document */
+.navbar .navbar-nav {display:inline-block; float:none;vertical-align:top;}
+.navbar .navbar-collapse{text-align:left;}
+
+
+
+.col-xs-11 {
+	left: 0.1%;
+	margin-left: 1%;
+}
+
+
+/**Sayfa Numaralandırma Tasarımı  BAŞ*/
+
+ul.pagination {
+	display: inline-block;
+	padding: 0;
+	margin: 7px;
+}
+
+ul.pagination li {display: inline;}
+
+
+ul.pagination li a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 90px 90px 90px 90px;
+	margin: 0px 2px;
+}
+
+
+ul.pagination li a.active {
+	background-color: #4CAF50;
+	color: white;
+	border-radius:90px ;
+}
+
+
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+/**Sayfa Numaralandırma Tasarımı  BİTİŞ*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**GENEL DUYURULAR BASLANGIC*/
+
+
+.row {
+	/**duyurular arasındaki ufak boşluk ve
+	butun duyuru divlerini kapsıyor*/
+
+	background-color:  #F8F8F8;
+	margin-bottom:2px;
+
+}
+.row  .panel {
+	background-color: transparent;
+}
+
+.row .panel .panel-default {
+	border-color: #68C171;
+}
+
+.panel .panel-green  >a {
+	color: #5cb85c;
+}
+.panel .panel-green  >a:hover {
+	color: #3d8b3d;
+}
+
+
+
+
+/**DUYURU BASLIK KISMI*/
+.panel-group .panel{
+
+	border-radius:10px 10px 0px 0px ;
+
+}
+
+
+.panel.panel-default .panel-heading
+{
+	/** foto ve başlık kapsayan dıştaki en büyük buton 'mor'  72d756      66CC66        #5cb85c*/
+
+	border-color: #68C171;
+	color: white;
+	background-color: #68C171;
+	padding: 2px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+
+.panel.panel-default .panel-heading .panel-green  {
+	/**yayıncının fotosunun ve başlığın olduğu yeşik  ''''yapışık ''''kısım*/
+
+	padding:0px;
+	height:60px;
+	border-color: transparent;
+	color: white;
+	background-color: #68C171;
+	border-radius: 10px;
+}
+
+/**5cb85c                    orjinal renk*/
+.panel-heading .foto
+{
+
+	height:48px;
+	width:48px;
+	float:left;
+}
+
+.panel-heading .baslik
+{
+	margin-left:65px ;
+	max-width: none;
+	font-size: 14px;
+	font-style: normal;
+
+
+}
+
+.panel-heading  > .baslik:hover{
+	/**duyuru basliginin ustune gelince olacak renk */
+	color: #3d8b3d;
+
+}
+
+.panel-heading #yayinlayan
+{
+	color: #111;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+
+	float:left;
+	background-color:transparent;
+
+}
+
+
+
+
+/**ICERİK KISMI DUYURUNUN DETAYI*/
+.row   .panel.panel-default .panel-collapse ul
+{
+	/**icerik */
+
+}
+
+
+
+
+/**collapse footer*/
+.panel .panel-body
+{
+	padding: 0px;
+
+}
+.panel .panel-footer
+{
+	height: 10px;
+	padding: 2px 5px;
+}
+
+
+.panel .panel-footer .yayinlayan
+{
+	float: left;
+	position: relative;
+
+
+}
+
+.panel .panel-footer .tarih
+{
+	float:right;
+	position: relative;
+
+}
+
+.footeriletisim  {
+	background-color: #F6f6f6;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+.footeriletisim .panel {
+	background-color:#f5f5f5;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+/**col. footer bitis*/
