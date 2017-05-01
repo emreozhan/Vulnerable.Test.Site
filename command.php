@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php require_once("includes/config.php")?>
-<?php include("includes/functions.php")?>
 <?php error_reporting(E_ALL ^ E_NOTICE); ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,33 +14,25 @@
 			<div class="col-xs-12 col-sm-12 col-md-6  col-lg-5">
 
 				<?php
-                echo"
-				<form name=\"ping\" action=\"#\" method=\"post\">
+                echo"<br>
+				<form name=\"ping\" action=\"#\" method=\"get\">
 			    <p>
-				Enter an IP address:
-				<input type=\"text\" name=\"ip\" size=\"30\">
+				Yardım almak istediğiniz komut adını girin:<br><br>
+				<input type=\"text\" name=\"talep\" size=\"30\">
 				<input type=\"submit\" name=\"Submit\" value=\"Submit\">
-			    </p>\n";
+			    </p>
+			    </form>
+			    \n";
 
-                if( $vulnerabilityFile == 'impossible.php' )
-                    $page[ 'body' ] .= "			" . tokenField();
 
-                $page[ 'body' ] .= "
-                        </form>
-				";
+
 				
 				
-				
-				if( isset( $_POST[ 'Submit' ]  ) ) {
-					$target = $_REQUEST[ 'ip' ];
-					if( stristr( php_uname( 's' ), 'Windows NT' ) ) {
-						$cmd = shell_exec( 'ping  ' . $target );
-					}
-					else {
-
-						$cmd = shell_exec( 'ping  -c 4 ' . $target );
-					}
-					echo "<pre>{$cmd}</pre>";
+				if( isset( $_GET[ 'Submit' ]  ) ) {
+					$talep = $_GET[ 'talep' ];
+                    $komut=shell_exec(''.$talep.' /?');
+                    //$komut=shell_exec('help '.$talep);
+                    echo "<pre>{$komut}</pre>";
 				}
 
 				?> 

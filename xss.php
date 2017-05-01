@@ -1,9 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php require_once("includes/config.php")?>
-<?php include("includes/functions.php")?>
-
 <?php error_reporting(E_ALL ^ E_NOTICE); ?>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <?php include("includes/header.php")?>
@@ -17,6 +14,7 @@
 			<div class="col-xs-12 col-sm-12 col-md-6  col-lg-5">
 				<?php
 				echo"
+				Lütfen Mesajınızı Girin:<br><br>
 				<form name=\"XSS\" action=\"#\" method=\"GET\">
 					<input type=\"text\" name=\"name\" value=\"\" style='width: 100%'><br><br>
 					<input type=\"submit\" value=\"Onayla\">
@@ -32,7 +30,7 @@
 			<div class="container col-xs-12 col-sm-12 col-md-6  col-lg-5">
 				<h2>Yardım !</h2>
 				<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#demo" >Yardım Görüntüle</button>
-				<div id="demo" class="collapse in">
+				<div id="demo" class="collapse">
 				<br>
 					<div class="panel panel-success">
 						<div class="panel-heading">

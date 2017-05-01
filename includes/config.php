@@ -2,7 +2,7 @@
 $db_adres="localhost";
 $db_user="root";
 $db_pass="";
-$db_tablo="bilgisayarkocaeli";
+$db_tablo="yazlabproje";
 
 $conn = mysqli_connect($db_adres,$db_user,$db_pass,$db_tablo);
 
