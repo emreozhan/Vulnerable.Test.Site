@@ -11,8 +11,9 @@
 
 		<div class="row col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
 			<br>
-			<div class="col-xs-12 col-sm-12 col-md-6  col-lg-5">
+			<div class="col-xs-12 col-sm-12 col-md-6  col-lg-6">
 				<?php
+				setcookie("Emre","Mert");
 				echo"
 				Lütfen Mesajınızı Girin:<br><br>
 				<form name=\"XSS\" action=\"#\" method=\"GET\">
@@ -27,7 +28,7 @@
 			</div>
 
 
-			<div class="container col-xs-12 col-sm-12 col-md-6  col-lg-5">
+			<div class="container col-xs-12 col-sm-12 col-md-6  col-lg-6">
 				<h2>Yardım !</h2>
 				<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#demo" >Yardım Görüntüle</button>
 				<div id="demo" class="collapse">
@@ -62,10 +63,10 @@
 							<h3 class="panel-title">Sömürü kaynak kodu</h3>
 						</div>
 						<div class="panel-body">
-							<ul>Açığa sebebiyet veren kod parçacığı:</ul>
-							<pre style="margin: 1em 0; display: inherit;"><br><?php show_source("source/xss_sourcecode.php"); ?></pre>
+							<ul><b>Açığa sebebiyet veren kod parçacığı:</b></ul>
 							<ul>Açık sebebi :Kodda görüldüğü gibi kullanıcıdan alınan input değeri hiçbir kontrolden
 								geçirilmeden ekrana yazdırılıyor</ul>
+							<pre style="margin: 1em 0; display: inherit;"><br><?php show_source("source/xss_sourcecode.php"); ?></pre>
 							<ul><b>Çözüm:</b></ul>
 							<pre style="margin: 1em 0; display: inherit;"><br><?php show_source("source/xss_cozum.php"); ?></pre>
 
@@ -77,11 +78,14 @@
 							<h3 class="panel-title">Örnek Sömürüler</h3>
 						</div>
 						<div class="panel-body">
-							<?php echo"	<b> ?name=&lt;script&gt;alert(\"Deneme Pop-up\");&lt;/script&gt;.</b>";?>
-							<?php echo"	<b><br> ?name=&lt;script&gt;alert(document.cookie);&lt;/script&gt;.</b>";?>
+							<ul><li><pre>/xss.php?name=&lt;script&gt;alert("XSS-Deneme Pop-up");&lt;/script&gt;.</pre><br></li>
+								<li><pre>/xss.php?name=&lt;script&gt;alert(document.cookie);&lt;/script&gt;.</pre><br></li>
+								<li><pre>/xss.php?name=&lta href="www.HEDEFSITE.com"&gt&ltfont color=a"onmouseover=alert(document.cookie);"&gtXSS-Injectınon-Hataları Engellemek Icın Sıteyı Yenileyin&lt/span&gt&lt/font&gt.</pre><br></li>
+							</ul>
 
 						</div>
-					</div>				</div>
+					</div>
+				</div>
 			</div>
 
 		</div>

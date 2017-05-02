@@ -13,25 +13,20 @@
 
 		<div class="row col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
 			<br>
-			<div class="col-xs-12 col-sm-12 col-md-6  col-lg-5">
+			<div class="col-xs-12 col-sm-12 col-md-6  col-lg-6">
 				
 			
 				<form  action="#" name="kayit" method="GET">
       			 ID:&nbsp;&nbsp;<input type="text" name="id" style="width:85%;" ><br /><br />
      			 &nbsp;&nbsp;&nbsp;&nbsp;<input name="gonder" type="submit"	><br /><br />
     			</form>
-<?php 
-
+<?php
 	if( isset( $_GET[ 'gonder' ] ) ) { 
 
-    $id = $_GET[ 'id' ]; 
-
-		$query  = "SELECT * FROM users WHERE id =$id;"; 
-	
+    $id = $_GET[ 'id' ];
+	$query  = "SELECT * FROM users WHERE id =$id;";
 
     $result = mysqli_query($conn,  $query ) or die( '<pre>' . ((is_object($conn)) ? mysqli_error($conn) : (($___mysqli_res =mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
-
-     
     while( $row = mysqli_fetch_assoc( $result ) )
 	 { 
 		$idsi=$row["id"];
@@ -43,14 +38,12 @@
         echo "<pre>ID: {$idsi}<br />username: {$username}<br />password: {$password}<br>telefon: {$tel}<br>mail: {$mail}</pre>"; 
     } 
 
-    mysqli_close($conn); 
-	
-} 	
-
+    mysqli_close($conn);
+}
 ?>
                 <br>
 		</div>
-			<div class="container col-xs-12 col-sm-12 col-md-6  col-lg-5">
+			<div class="container col-xs-12 col-sm-12 col-md-6  col-lg-6">
 				<h2>Yardım !</h2>
 				<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#demo" >Yardım Görüntüle</button>
 				<div id="demo" class="collapse">
@@ -60,9 +53,13 @@
 							<h3 class="panel-title">Zafiyet Açıklama</h3>
 						</div>
 						<div class="panel-body">
-							<p><ul>SQL injection sql dili özelliklerinden faydalanılarak ekranda bulunan müdahale edilebilecek alana ek SQL komutları yazarak yapılan bir ataktır.SQL injection uygulama içinde bulunan güvenlik açığından faydalanır.
-SQL cümlecikleri oluşturulurken araya sıkıştırılan herhagi bir meta karakter SQL injection’a neden olabilir. Meta-karakter bir program için özel anlamı olan karakterlere verilen isimdir. SQL’ için kritik metakarakter (‘) tek tırnak’ tır. Çünkü iki tek tırnağın arası string olarak algılanır. Diğer bir önemli meta-karakter ise (;) noktalı virgüldür, satırın bittiğini ve yeni satır başladığını bildirir.
-.</ul></p>
+							<p><ul>SQL injection sql dili özelliklerinden faydalanılarak ekranda bulunan müdahale edilebilecek alana ek
+								SQL komutları yazarak yapılan bir ataktır.SQL injection uygulama içinde bulunan güvenlik açığından faydalanır.
+								SQL cümlecikleri oluşturulurken araya sıkıştırılan herhagi bir meta karakter SQL injection’a neden olabilir.
+								Meta-karakter bir program için özel anlamı olan karakterlere verilen isimdir. SQL’ için kritik metakarakter (‘)
+								tek tırnak’ tır. Çünkü iki tek tırnağın arası string olarak algılanır. Diğer bir önemli meta-karakter ise (;) noktalı
+								virgüldür, satırın bittiğini ve yeni satır başladığını bildirir.
+							</ul></p>
 						
 						</div>
 					</div>
@@ -82,7 +79,10 @@ SQL cümlecikleri oluşturulurken araya sıkıştırılan herhagi bir meta karak
 							kullanıcı şu şekilde bir "akıllı" girdi girebilir: 	(100 OR 1=1 ).<br />    
 							Bu şekilde  tüm database’i elde edebilirler ya da database ile ilgili herhangi bir işlem yapabilir.
 </ul>
-							<ul>Çözüm:<b>Gerekli olan tüm meta-karakterleri kontrol edilmelidir.</b></ul>
+							<ul><b>Çözüm:</b>
+								Yazdığımız fonksiyon Meta karakterleri engelliyor bu sayede kullanıcın databasee ulaşması için gerekli
+								komutları girmesi engellenmiş olur.
+								</b></ul>
 							<pre style="margin: 1em 0; display: inherit;"><br><?php show_source("source/sql_cozum.php"); ?></pre>
 
 						</div>

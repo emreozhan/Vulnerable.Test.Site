@@ -1,4 +1,4 @@
 <?php
-$mesaj .= 'Hello ' . $_GET[ 'name' ];
+$mesaj .= '' . $_GET[ 'name' ];
 echo "<pre>Çıktı :$mesaj</pre>";
 ?>
